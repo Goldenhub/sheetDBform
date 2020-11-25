@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sheetDB freestyle</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <form action="https://sheetdb.io/api/v1/tsppfgznh2vju" method="post" id="myForm" name="form">
+            <input type="text" placeholder="username" id="username" name="data[username]" required autofocus> <br>
+            <input type="email" placeholder="email" id="email" name="data[email]" required> <br>
+            <input type="password" placeholder="password" id="password" name="data[password]" minlength="8" maxlength="13" title="Minimum of 8 characters and maximum of 13 characters" required> <br>
+
+            <input type="submit" value="submit" id="submit">
+        </form>
+
+        <form action="https://sheetdb.io/api/v1/tsppfgznh2vju" method="post" id="loginForm">
+            <input type="email" placeholder="email" id="myemail" name="email" required> <br>
+            <input type="password" placeholder="password" id="mypassword" name="password" minlength="8" maxlength="13" required> <br>
+
+            <input type="submit" value="login" id="login">
+        </form>
+
+        <div class="misc">
+            <p class="hero">sheetDB <span>form</span> <br> submission</p>
+
+            <p class="loginLink">Already with us? <br> <a href="#" id="showLogin">Login</a></p>
+            <p class="signupLink">Just here? <br> <a href="#" id="showSignup">Signup</a></p>
+        </div>
+    </div>
+
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
