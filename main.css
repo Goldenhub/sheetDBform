@@ -90,4 +90,24 @@ body {
     outline-offset: 15px;
 }
 
-/* 12 evo road gra */
+@media only screen and (max-width : 800px)  {
+    .container {
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        width: 80%;
+    }
+
+    html {
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width : 300px)  {
+
+    html {
+        font-size: 0.4rem;
+    }
+}

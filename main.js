@@ -27,10 +27,13 @@ form.addEventListener("submit", e => {
         response => response.json()
     ).then((html) => {
       alert('Registration complete. Thanks')
+      form.username.value = "";
+      form.email.value = "";
+      form.password.value = "";
     });
 });
 
-//showlogin
+//showlogin button
 loginLink.addEventListener('click', ()=>{
     form.style.display = 'none';
     loginForm.style.display = 'block'
@@ -38,7 +41,7 @@ loginLink.addEventListener('click', ()=>{
     login.style.display = 'none'
 })
 
-//showsignup
+//showsignup button
 signupLink.addEventListener('click', ()=> {
     form.style.display = 'block';
     loginForm.style.display = 'none';
@@ -52,16 +55,17 @@ loginForm.addEventListener("submit", e => {
     fetch(`${loginForm.action}/search?email=${myemail.value}&password=${mypassword.value}&casesensitive=false`)
     .then( response => response.json() )
     .then( data => {
-        console.log(data)
-        // if(data = []) alert('Oops! Enter correct details');
-                if(data.length == 0 ) {
-                    alert('Oops! Enter correct details');
-                } else {
-                    if(myemail.value == data[0].email && mypassword.value == data[0].password) {
-                        alert(`Welcome ${data[0].username}`)
-                    } else {
-                        alert('Oops! Enter correct details');
-                    }
-                }
+        if(data.length == 0 ) {
+            alert('Oops! Enter correct details');
+        } else {
+            if(myemail.value == data[0].email && mypassword.value == data[0].password) {
+                alert(`Welcome ${data[0].username}`)
+            } else {
+                alert('Oops! Enter correct details');
+            }
+        }
+        loginForm.myemail.value = "";
+        loginForm.mypassword.value = "";
     } );
 });
+
