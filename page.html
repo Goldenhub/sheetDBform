@@ -12,8 +12,11 @@
             <span class="name"></span> <br>
             <small class="email"></small>
         </h1>
+
+        <form id="logout" action="">
+            <button class="logoutBtn">Logout</button>
+        </form>
         
-        <a href="index.html" class="logoutBtn">Logout</a>
     </div>
     
     <script>
@@ -23,6 +26,16 @@
         x = x.join('');
         document.querySelector('.name').textContent = x;
         document.querySelector('small.email').textContent = window.localStorage.getItem('email');
+
+        //logout script
+        document.querySelector('#logout').addEventListener('submit', function clear(e) {
+            e.preventDefault();
+            window.localStorage.removeItem('user');
+            window.localStorage.removeItem('email');
+            window.location.href = 'index.html';
+        })
+
+       
     </script>
 </body>
 </html>

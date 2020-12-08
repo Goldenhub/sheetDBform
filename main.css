@@ -99,7 +99,7 @@ h1 .email {
     color: teal;
 }
 
-a.logoutBtn {
+.logoutBtn {
     font-size: 1.4rem;
     margin: 20px auto;
     padding: 5px;
@@ -109,7 +109,7 @@ a.logoutBtn {
     text-decoration: none;
 }
 
-a.logoutBtn:hover {
+.logoutBtn:hover {
     background-color: rgba(0, 255, 255, 0.439);
     border: 3px solid rgb(4, 43, 51);
     color: whitesmoke;
