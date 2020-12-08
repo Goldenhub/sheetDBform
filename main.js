@@ -5,11 +5,11 @@ let password = document.querySelector('#password');
 let myemail = document.querySelector('#myemail');
 let mypassword = document.querySelector('#mypassword');
 let submit = document.querySelector('#submit');
-let loginForm = document.querySelector('#loginForm')
-let loginLink = document.querySelector('#showLogin')
-let signupLink = document.querySelector('#showSignup')
-let signup = document.querySelector('.signupLink')
-let login = document.querySelector('.loginLink')
+let loginForm = document.querySelector('#loginForm');
+let loginLink = document.querySelector('#showLogin');
+let signupLink = document.querySelector('#showSignup');
+let signup = document.querySelector('.signupLink');
+let login = document.querySelector('.loginLink');
 
 //after content loaded
 document.addEventListener('DOMContentLoaded', ()=>{
