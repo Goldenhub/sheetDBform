@@ -59,7 +59,10 @@ loginForm.addEventListener("submit", e => {
             alert('Oops! Enter correct details');
         } else {
             if(myemail.value == data[0].email && mypassword.value == data[0].password) {
-                alert(`Welcome ${data[0].username}`)
+                // alert(`Welcome ${data[0].username}`);
+                window.localStorage.setItem('user', `${data[0].username}`);
+                window.localStorage.setItem('email', `${data[0].email}`)
+                window.location.href = 'page.html'
             } else {
                 alert('Oops! Enter correct details');
             }
@@ -68,4 +71,5 @@ loginForm.addEventListener("submit", e => {
         loginForm.mypassword.value = "";
     } );
 });
+
 

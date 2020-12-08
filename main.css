@@ -90,6 +90,32 @@ body {
     outline-offset: 15px;
 }
 
+h1.page {
+    color: #00ffff;
+    text-shadow: teal;
+}
+
+h1 .email {
+    color: teal;
+}
+
+a.logoutBtn {
+    font-size: 1.4rem;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: #00ffff;
+    border: 3px solid teal;
+    width: 30%;
+    text-decoration: none;
+}
+
+a.logoutBtn:hover {
+    background-color: rgba(0, 255, 255, 0.439);
+    border: 3px solid rgb(4, 43, 51);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
 @media only screen and (max-width : 800px)  {
     .container {
         align-items: center;
